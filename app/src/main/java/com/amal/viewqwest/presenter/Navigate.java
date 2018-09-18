@@ -1,7 +1,6 @@
 package com.amal.viewqwest.presenter;
 
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 
 /**

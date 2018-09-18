@@ -12,9 +12,6 @@ import com.amal.viewqwest.model.Users;
 import com.amal.viewqwest.presenter.UserClickHandler;
 import com.google.gson.internal.LinkedTreeMap;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

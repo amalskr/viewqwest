@@ -3,8 +3,6 @@ package com.amal.viewqwest.model;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.internal.LinkedTreeMap;
 
-import org.json.JSONObject;
-
 /**
  * Created by AMAL on 2018-09-17.
  */

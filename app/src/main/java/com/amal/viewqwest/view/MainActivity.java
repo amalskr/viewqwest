@@ -12,7 +12,11 @@ import android.widget.TextView;
 import com.amal.viewqwest.QwestApp;
 import com.amal.viewqwest.R;
 import com.amal.viewqwest.adapters.UserAdapter;
+import com.amal.viewqwest.model.Users;
 import com.amal.viewqwest.presenter.Navigate;
+
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -49,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     private void setupRecycler() {
 
         if (QwestApp.USER_LIST.size() > 0) {
-
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
             recyclerView.setAdapter(new UserAdapter(getApplicationContext(), QwestApp.USER_LIST));
@@ -59,6 +62,22 @@ public class MainActivity extends AppCompatActivity {
             showError("No Users..!");
         }
     }
+
+    public final static Comparator<Users> CartNameComparator = new Comparator<Users>() {
+
+        @Override
+        public int compare(Users users1, Users users2) {
+
+            String fruitName1 = users1.getName().toUpperCase();
+            String fruitName2 = users2.getName().toUpperCase();
+
+            //ascending order
+            return fruitName1.compareTo(fruitName2);
+
+            //descending order
+            //return fruitName2.compareTo(fruitName1);
+        }
+    };
 
     private void showError(String message) {
         noDataTv.setText(message);

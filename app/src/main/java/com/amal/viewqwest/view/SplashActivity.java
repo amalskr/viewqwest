@@ -2,6 +2,7 @@ package com.amal.viewqwest.view;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 
 import com.amal.viewqwest.QwestApp;
 import com.amal.viewqwest.R;
@@ -44,7 +45,11 @@ public class SplashActivity extends AppCompatActivity {
 
                 int statusCode = response.code();
 
+                Log.d("JSON", response.body().toString());
+                System.out.println(response.body());
+
                 if (statusCode == 200) {
+
                     boolean STATUS = Boolean.valueOf(response.body().getStatus());
                     String MESSAGE = response.body().getMessage();
 

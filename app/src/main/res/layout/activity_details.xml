@@ -5,7 +5,6 @@
     tools:context="com.amal.viewqwest.view.DetailsActivity">
 
     <data>
-
         <variable
             name="user"
             type="com.amal.viewqwest.model.Users" />
